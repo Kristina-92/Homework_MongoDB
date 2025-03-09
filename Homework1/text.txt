@@ -1,0 +1,345 @@
+// Domasno 1
+
+//1
+
+db.createCollection("cars")
+db.cars.insertOne({make: "Toyota", model: "Rav4", year: 2021});
+db.cars.insertMany([
+{ make: "Ford", model: "Focus", year: 1998 },
+{ make: "Renault", model: "Megane", year: 2005 },
+{ make: "Seat", model: "Leon", year: 2009 },
+{ make: "BMW", model: "X1", year: 2015 }
+])
+
+//2
+
+db.createCollection("books")
+db.books.insertMany([{
+title: "The Divine Comedy",
+author: "Dante Alighieri",
+releaseYear: 932,
+pages: 932,
+},
+{
+title: "The Stranger",
+author: "Albert Camus",
+releaseYear: 1942,
+pages: 185,
+},
+{
+title: "The Decameron",
+author: "Giovanni Boccaccio",
+releaseYear: 1351,
+pages: 1024,
+},
+{
+title: "Great Expectations",
+author: "Charles Dickens",
+releaseYear: 1861,
+pages: 194,
+},
+{
+title: "Harry Potter and the Goblet of Fire",
+author: "J. K. Rowling",
+releaseYear: 2000,
+pages: 636,
+}])
+
+//3
+
+db.createCollection("restaurants)
+db.restaurants.insertMany([
+{
+name: "The Ledbury",
+cuisine: "Modern Cuisine",
+location: "United Kingdom",
+michelinstars: 3,
+},
+{
+name: "Amador",
+cuisine: "Creative",
+location: "Austria",
+michelinstars: 3,
+},
+{
+name: "Atelier Moessmer Norbert Niederkofler",
+cuisines: "Creative, Alpine",
+location: "Italy",
+michelinstars: 3,
+}
+])
+db.restaurants.updateOne({name:"Atelier Moessmer Norbert Niederkofler"}, {$set: {michelingreenstar: true}})
+
+//4
+
+db.createCollection("students")
+db.students.insertOne({name: "Marko", surname: "Markovski", age: 21, city:"Skopje" })
+db.students.insertMany([
+{ name: "Maja", surname: "Trajkovska", age: 22, city: "Veles" },
+{ name: "Milko", surname: "Milkovski", age: 20, city: "Tetovo" },
+{ name: "Miki", surname: "Ivanovski", age: 21, city: "Kratovo" },
+{ name: "Stefanija", surname: "Bozinovska", age: 20, city: "Ohrid" }
+])
+
+db.users.find()
+
+//5
+
+db.createCollection("subjects")
+db.subjects.insertMany(
+[
+{ name: "Mathematics", credits: 3, semester: "Fall", professor: "Dr. Smith" },
+{ name: "Physics", credits: 4, semester: "Spring", professor: "Dr.Adamds" },
+{ name: "Chemistry", credits: 3, semester: "Fall", professor: "Dr. Green" },
+{ name: "Biology", credits: 4, semester: "Spring", professor: "Dr. White" },
+])
+
+//6
+
+db.createCollection("movies")
+db.movies.insertMany([
+{
+title: "Inception",
+director: "Christopher Nolan",
+release_year: 2010,
+genre: "Sci-Fi"
+},
+{
+title: "The Dark Knight",
+director: "Christopher Nolan",
+release_year: 2008,
+genre: "Action"
+},
+{
+title: "Mission: Impossible – Dead Reckoning Part One",
+director: "Christopher McQuarrie",
+release_year: 2023,
+genre: "Action"
+}
+])
+
+//7
+
+db.createCollection("employees")
+db.employees.insertMany([
+{ name: "Jane Smith", department: "IT", position: "Software Engineer" },
+{ name: "John Doe", department: "HR", position: "HR Manager" },
+{ name: "Mary Williams", department: "Finance", position: "Accountant" },
+{ name: "David Johnson", department: "Marketing", position: "Marketing Specialist"}
+])
+
+//8
+
+db.createCollection("products")
+db.products.insertMany([
+{ name: "Laptop", category: "Electronics", price: 999.99 },
+{ name: "Wireless Headphones", category: "Electronics", price: 199.99 },
+{ name: "IPhone", category: "Electronics", price: 990.99 },
+{ name: "Apple Watch Ultra 2", category: "Electronics", price: 249.99 }
+])
+
+//9
+
+db.createCollection("userProfiles")
+db.userProfiles.insertMany([
+{
+username: "emily_jones",
+email: "emily.jones@gmail.com",
+birthdate: "25.08.2000",
+language: "English",
+isActive: true,
+},
+{
+username: "robert_martin",
+email: " robert.martin@gmail.com",
+birthdate: "28.01.1998",
+language: "English",
+isActive: true,
+},
+{
+username: "lucy_smith",
+email: "lucy.smith@gmail.com",
+birthdate: "14.11.1994",
+language: "English",
+isActive: false,
+},
+{
+username: "mila_davis",
+email: "mila.davis@gmail.com",
+birthdate: "02.12.1989",
+language: "English",
+isActive: true,
+},
+{
+username: "michael_clark",
+email: " michael.clark@gmail.com",
+birthdate: "08.07.1990",
+language: "English",
+isActive: false,
+}
+])
+
+//10
+
+db.createCollection("zooAnimals")
+db.zooAnimals.insertMany( [
+{
+name: "Lion",
+species: "Panthera leo",
+habitat: "Savannah",
+diet: "Carnivore",
+status: "Vulnerable",
+averageWeight: 190,
+lifeSpan: 12
+},
+{
+name: "Elephant",
+species: "Loxodonta africana",
+habitat: "Savannah and Forest",
+diet: "Herbivore",
+status: "Endangered",
+averageWeight: 6000,
+lifeSpan: 60
+},
+{
+name: "Giraffe",
+species: "Giraffa camelopardalis",
+habitat: "Savannah",
+diet: "Herbivore",
+status: "Least Concern",
+averageWeight: 800,
+lifeSpan: 25
+},
+{
+name: "Penguin",
+species: "Spheniscidae",
+habitat: "Antarctic regions",
+diet: "Carnivore",
+status: "Least Concern",
+averageWeight: 30,
+lifeSpan: 20
+},
+{
+name: "Zebra",
+habitat: "Grasslands",
+diet: "Herbivore",
+status: "Near Threatened",
+averageWeight: 350,
+lifeSpan: 25
+},
+{
+name: "Panda",
+species: "Ailuropoda melanoleuca",
+habitat: "Bamboo Forests",
+diet: "Herbivore",
+status: "Vulnerable",
+averageWeight: 85,
+lifeSpan: 20
+},
+{
+name: "Kangaroo",
+species: "Macropus rufus",
+habitat: "Australian Outback",
+diet: "Herbivore",
+status: "Least Concern",
+averageWeight: 85,
+lifeSpan: 23
+},
+{
+name: "Gorilla",
+species: "Gorilla gorilla",
+habitat: "Tropical Forests",
+diet: "Omnivore",
+status: "Endangered",
+averageWeight: 160,
+lifeSpan: 35
+}
+])
+
+// Zadaca 1
+
+1. Povrzete se na mongodb -
+   Open MongoDB=> Sign In => Cluster0 => Connect => Connect using Compass => Copy connection string => MongoDB Compass select + (New Connection) => enter URI (paste connection string with password value) => Save&Connect
+
+2. Kreirajte kolekcija za korisnici 'users'
+   db.createCollection("users")
+
+3. Vmetnete tri podatoka vo taa kolekcija so pomos na funkcijata insert
+   db.users.insertOne({firstname: "Martin",
+   lastname: "Martinovski",
+   averagegrade: 8.5,
+   isStudent: true})
+   db.users.insertMany([{firstname: "Mila", lastname: "Milevska", averagegrade: 9, isStudent: true}, {firstname: "Nikola", lastname: "Nikolovski", averagegrade: 7, isStudent: true }])
+
+4. Izlistajte gi dodadenite podatoci na ekran
+   db.users.find()
+
+5. Azurirajte eden podatok
+   db.users.updateOne({firstname: "Mila"}, {$set:{ averagegrade:9.5}})
+
+6. Izbrisete eden podatok
+   db.users.deleteOne({firstname: "Nikola"})
+
+7. Napravete nova kolekcija (accounts)
+   db.createCollection("accounts")
+
+8. Izbrisete ja istata
+   db.accounts.drop()
+
+9. Pa potoa izbrisete ja databazata - istrazete
+   db.dropDatabase()
+
+// Zadaca 2
+
+1. Kreirajte kolekcija za biblioteka
+   db.createCollection("library")
+
+2. Vo istata naednas dodadete poveke knigi
+   db.library.insertMany([{
+   title: "The Divine Comedy",
+   author: "Dante Alighieri",
+   releaseYear: 932,
+   pages: 932,
+   },
+   {
+   title: "The Stranger",
+   author: "Albert Camus",
+   releaseYear: 1942,
+   pages: 185,
+   },
+   {
+   title: "The Decameron",
+   author: "Giovanni Boccaccio",
+   releaseYear: 1351,
+   pages: 1024,
+   },
+   {
+   title: "Great Expectations",
+   author: "Charles Dickens",
+   releaseYear: 1861,
+   pages: 194,
+   },
+   {
+   title: "Harry Potter and the Goblet of Fire",
+   author: "J. K. Rowling",
+   releaseYear: 2000,
+   pages: 636,
+   }])
+
+3. Ispecatete gi na ekran
+   db.library.find()
+
+4. Najdete gi knigite kade godinata na nivno izleguvanje pred 1950 godinata
+   db.library.find({releaseYear: {$lt: 1950} })
+
+5. Azurirajte odredena kniga spored nejzinoto ima t.e Title, promenete ja godinata na nejzinoto izleguvanje
+   db.library.updateOne({title: "Great Expectations"}, {$set: {releaseYear: 1860}})
+
+6. Izbrisete edna kniga od odredena godina. Primer najdete nekoja od 1984 i izbrisete ja
+   db.library.deleteOne({releaseYear: 1942})
+
+7. Prasanje: Koja komanda treba da ja iskoristite za da ja izbrisete ovde kolekcijata?
+   db.library.drop()
+
+8. Prasanje: Koja komanda ke vi treba da ja izbrisete databazata?
+   db.dropDatabase()
